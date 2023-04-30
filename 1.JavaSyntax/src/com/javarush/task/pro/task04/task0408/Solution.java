@@ -13,7 +13,7 @@ public class Solution {
         while (console.hasNextInt()) {
             int x = console.nextInt();
             if (x > max && (x % 2) == 0)
-            max = x;
+                max = x;
         }
         System.out.println(max);
 
