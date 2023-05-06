@@ -13,21 +13,29 @@ public class Solution {
 
 
     public static void main(String[] args) {
-        String repeated = land.repeat(3);
-        String repeated2 = land.repeat(6);
-        System.out.print(repeated);
-        System.out.print(robot);
-        System.out.print(repeated2);
-        System.out.println();
+        for (int a = 0; a <= 8; a++) {
+            for (int b = 0; b <= 9; b++) {
+                if (b == 3) {
+                    System.out.print(hole);
+                    continue;
 
-        for (int i = 1; i <=8; i++) {
-            for (int j = 0; j <= 9; j++) {
+
+                }
+
+
                 System.out.print(land);
+
+
             }
             System.out.println();
         }
-        for (int k = 0; k <= 9; k++) {
-            System.out.print(bug);
-        }
+
+        for (int d = 0; d <= 9; d++)
+            System.out.print(death);
+
     }
 }
+
+
+
+
