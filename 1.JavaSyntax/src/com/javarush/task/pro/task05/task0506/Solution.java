@@ -15,13 +15,14 @@ public class Solution {
         array = new int[number];
         for (int i = 0; i < array.length; i++) {
             array[i] = console.nextInt();
-
         }
-        int min = array [0];
+        int min = array[0];
         for (int i = 0; i < array.length; i++) {
-            if (array[i] < min) {
-                min = array[i];
+            if (min > array [i]) {
+                min = array [i];
             }
+
+
         }
         System.out.println(min);
     }
