@@ -18,10 +18,23 @@ public class Solution {
     public static int amigoLives = 9;
     public static int diabloLives = 9;
 
-
     public static void main(String[] args) {
         diabloPosition = getRandomNumber(4);
         findDiablo();
+        battle();
+    }
+    public static void battle(){
+        while (amigoLives > 0 && diabloLives > 0) {
+            if (amigoAttacks()==diabloDefends()){
+                System.out.println(diabloDefendPhrase);
+                amigoLostLife();
+            }
+            else {
+                System.out.println(amigoAttackPhrase);
+                diabloLostLife();
+            }
+
+        }
     }
 
     public static int getRandomNumber(int range) {
