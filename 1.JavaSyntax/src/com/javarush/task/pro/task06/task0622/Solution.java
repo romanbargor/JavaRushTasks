@@ -15,23 +15,26 @@ public class Solution {
     public static String winPhrase = "Амиго одержал победу над Диабло и выбил из его головы загадочный кристалл.";
     public static String loosePhrase = "Диабло победил Амиго.";
     public static int diabloPosition;
+    public static int amigoLives = 9;
+    public static int diabloLives = 9;
 
 
     public static void main(String[] args) {
-       diabloPosition = getRandomNumber(4);
-       findDiablo();
+        diabloPosition = getRandomNumber(4);
+        findDiablo();
     }
 
     public static int getRandomNumber(int range) {
         return (int) (Math.random() * range) + 1;
     }
+
     public static void findDiablo() {
         System.out.println(getFirstPositionPhrase);
         Scanner console = new Scanner(System.in);
         while (true) {
             int number = console.nextInt();
 
-            if (diabloPosition==number) {
+            if (diabloPosition == number) {
                 System.out.println(findDiabloPhrase);
                 break;
             } else {
@@ -41,4 +44,24 @@ public class Solution {
         }
     }
 
+    public static void amigoLostLife() {
+        amigoLives = amigoLives - 1;
+
+
+    }
+    public static void diabloLostLife() {
+        diabloLives = diabloLives - 3;
+    }
+    public static int amigoAttacks() {
+        int randomNumber = getRandomNumber(3);
+        return randomNumber;
+    }
+    public static int diabloDefends() {
+        int randomNumber = getRandomNumber(3);
+        return randomNumber;
+    }
+
+
 }
+
+
